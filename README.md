@@ -1,6 +1,8 @@
 ## Raspberry Pi with GPS Module
 
-### This project is to build a for-fun, real-time graphical location display system using:
+### STATUS: 
+- The checksum calculator works, if you need to make some checksums.   
+- The UBX_CONFIG.c program kind of works. it'll send the config messages to the module, but the ack/nak checking doesn't work quite right. There is also a block at the end to test NAV-PVT read. It doesn't work.  
  #### Hardware: 
  - Raspberry Pi model 4
  - Sparkfun U-Blox ZOE-M8Q GPS Module
