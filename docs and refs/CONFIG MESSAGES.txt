@@ -1,0 +1,47 @@
+**JUST SCRATCHPAPER - NOTHING IMPORTANT TO SEE HERE **
+
+UBX-CFG-RATE for 5hz
+B5 62 06 08 06 00 C8 00 01 00 01 00 DE 6A
+  Header (2 bytes): B5 62
+  Class ID (1 byte): 06
+  Message ID (1 byte): 08
+  Payload length (2 bytes): 06 00
+  Measurement rate (2 bytes): C8 00 (in this example, it's set to 5Hz, which is 200ms)
+  Navigation rate (2 bytes): 01 00 (in this example, it's set to 1Hz)
+  Alignment to reference time of week (1 byte): 01 (align to UTC time)
+
+
+// a config message to tell the module to send NAV-PVT messages at a frequency of 1hz
+UBX-CFG-MSG to send only NAV-PVT at 1Hz
+b5 62 06 01 03 01 07 01 13 47
+
+// configure the module to send ubx protocol messages over a specific port
+b5 62 06 00 14 00 00 00 00 00 00 00 02 00 00 00 00 01 01 01 01 00 00 20 22
+check to make sure this is correct 
+
+
+11.7 How to change between protocols
+Reconfiguring a port from one protocol to another is a two-step process:
+• Step 1: the preferred protocol(s) needs to be enabled on a port using UBX-CFG-PRT. One port can handle
+several protocols at the same time (e.g. NMEA and UBX). By default, all ports are configured for UBX and
+NMEA protocol so in most cases, it's not necessary to change the port settings at all. Port settings can be
+viewed and changed using the UBX-CFG-PRT messages.
+
+• Step 2: activate certain messages on each port using UBX-CFG-MSG.
+
+
+B5 62 06 00 14 00 00 00 00 00 00 00 00 00 00 00 00 03 00 03 00 00 00 00 00
+14 payload length
+00 port num 
+00 reserved1
+00 00 tx ready 
+00 00 00 00 mode field
+00 00 00 00 reserved2
+03 00 inproto (ubx and nmea)
+03 00 outproto (ubx and nmea)
+00 00 flags (extended tx timeout)
+00 00 reserved3
+
+B5 62 06 00 14 00 00 00 00 00 00 00 00 00 00 00 00 03 00 03 00 00 00 00 00 00 00 00 00 00 00 00 D2 56
+B5 62 06 01 03 00 01 00 01 01 08 01 06 00 01 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 F0 8C
+B5 62 06 00 14 00 00 00 00 00 C0 08 00 00 00 C2 01 00 01 01 00 00 00 00 00 00 00 00 00 00 00 00 07 00 07 00 00 00
