@@ -2,7 +2,7 @@
 
 ### STATUS: 
 - The checksum calculator works, if you need to make some checksums.   
-- The UBX_CONFIG.c program kind of works. it'll send the config messages to the module, but the ack/nak checking doesn't work quite right. There is also a block at the end to test NAV-PVT read. It doesn't work.  
+- The UBX_CONFIG.c program kind of works. Config messages are sent to the receiver, ack/nak response is received, and both NMEA and UBX-NAV-PVT messages are received. NMEA sentences appear to be accurate (at least, the RMC message is accurate), but the NAV-PVT UBX message is showing the wrong time, date, and location. Other fields are probably also incorrect. I'm unsure about why this is, but it could be an issue with converting the hex to human readable format. 
  #### Hardware: 
  - Raspberry Pi model 4
  - Sparkfun U-Blox ZOE-M8Q GPS Module

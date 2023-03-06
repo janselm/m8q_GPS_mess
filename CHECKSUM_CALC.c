@@ -38,7 +38,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  printf("Checksum: %x, %x\n", ck_a, ck_b);
+  printf("Checksum: %02x, %02x\n", ck_a, ck_b);
 
 
   printf("Full message with checksum: ");
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
   for(int k = 0; k < passedArgs; k++) {
     printf("0x%02x, ", buffer[k]);
   }
-  printf("0x%x, 0x%x}\n", ck_a, ck_b);
+  printf("0x%02x, 0x%02x}\n", ck_a, ck_b);
 
   free(buffer);
   return 0;
