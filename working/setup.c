@@ -31,6 +31,7 @@ void disable_GNGVT(int i2c_handle) {
     usleep(200000);
   }
   free(acknakmsg);
+  printf("\n");
 }
 
 /**
@@ -46,6 +47,7 @@ void disable_GNGSV(int i2c_handle) {
     if(acknakmsg->msg_id == 0x01) {
       printf("GNGSV OFF Configuration Accepted\n");
       printf("Message Class and ID: 0x%02x 0x%02x\n", acknakmsg->class_id, acknakmsg->msg_id);
+      printf("Checksum: 0x%02x 0x%02x\n", acknakmsg->ck_a, acknakmsg->ck_b);
       break;
     }
     if(acknakmsg->msg_id == 0x00) { 
@@ -55,6 +57,7 @@ void disable_GNGSV(int i2c_handle) {
     usleep(200000);
   }
   free(acknakmsg);
+  printf("\n");
 }
 
 /**
@@ -79,6 +82,7 @@ void disable_GNGSA(int i2c_handle) {
     usleep(200000);
   }
   free(acknakmsg);
+  printf("\n");
 }
 
 /**
@@ -103,6 +107,7 @@ void disable_GNGLL(int i2c_handle) {
     usleep(200000);
   }
   free(acknakmsg);
+  printf("\n");
 }
 
 /**
@@ -127,6 +132,7 @@ void disable_GNGGA(int i2c_handle) {
     usleep(200000);
   }
   free(acknakmsg);
+  printf("\n");
 }
 
 /**
@@ -150,6 +156,7 @@ void enable_navPVT(int i2c_handle) {
     usleep(200000);
   }
   free(acknakmsg);
+  printf("\n");
 }
 
 /**
@@ -173,6 +180,7 @@ void enable_navPOSLLH(int i2c_handle) {
     usleep(200000);
   }
   free(acknakmsg);
+  printf("\n");
 }
 
 /**
@@ -197,6 +205,7 @@ void setRate_1hz(int i2c_handle) {
     usleep(200000);
   }
   free(acknakmsg);
+  printf("\n");
 }
 
 /**
