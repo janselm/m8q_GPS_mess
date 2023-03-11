@@ -2,7 +2,8 @@
 
 ### STATUS: 
 - The checksum calculator works, if you need to make some checksums.   
-- The UBX_CONFIG.c program kind of works. Config messages are sent to the receiver, ack/nak response is received, and both NMEA and UBX-NAV-PVT messages are received. NMEA sentences appear to be accurate (at least, the RMC message is accurate), but the NAV-PVT UBX message is showing the wrong time, date, and location. Other fields are probably also incorrect. I'm unsure about why this is, but it could be an issue with converting the hext 
+- The UBX_CONFIG.c program mostly works.
+	+ The program is set up to read NMEA and NAV-PVT messages. All data is read in hex, so NMEA message
  #### Hardware: 
  - Raspberry Pi model 4
  - Sparkfun U-Blox ZOE-M8Q GPS Module

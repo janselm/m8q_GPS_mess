@@ -88,3 +88,32 @@ B5 62 06 01 08 00 01 07 01 00 00 00 00 00 18 E2
 with a rate on UTC Time:
 1hz 
 B5 62 06 08 06 00 E8 03 01 00 00 00 00 37 
+
+
+b5 62 01 07 5c 00 78 92 ea 05 e7 07 03 06 03 22 01 37 10 00 00 00 dd 9a 02 00 03 03 0a 0e 1f c0 f8 d0 35 60 e1 14 b2 5d 00 00 1c e3 00 00 63 0b 00 00 0f 0f 00 00 04 00 00 00 0b 00 00 00 23 00 00 00 0c 00 00 00 00 00 00 00 2a 01 00 00 8e db f2 00 91 00 00 00 e0 4a 23 00 00 00 00 00 00 00 00 00 c5 65
+
+
+
+Data read from i2c device:
+Lat: ffffffff, Long: ffffffff
+Data read from i2c device:
+Lat: c1210f0a, Long: 303fffb
+Data read from i2c device:
+Lat: 35363838, Long: 2e313035
+Data read from i2c device:
+Lat: 31303533, Long: 2c30302e
+Data read from i2c device:
+Lat: 2c38342c, Long: 38302c31
+Data read from i2c device:
+Lat: 31302c32, Long: 312c312c
+Data read from i2c device:
+Lat: 37312c35, Long: 312c3130
+Data read from i2c device:
+Lat: 41372a33, Long: 342cb134
+Data read from i2c device:
+Lat: 31322c35, Long: 34332c31
+Data read from i2c device:
+Lat: 3837302c, Long: 4e2c3035
+
+
+$GNRMC,183018.00,A,3501.88591,N,07854.02148,W,0.096,,070323,,,D*7B
